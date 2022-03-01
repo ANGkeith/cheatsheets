@@ -29,3 +29,9 @@ jq '.foo[] | {field_1,field_2} | join(" ")'
 
 # only print records where given field matches a value
 jq '.foo[] | select(.field_1 == "value_1")'
+
+# read the entire input into array
+jq -s '.' <<< '{ "a": 1 } { "b": 2 }'
+
+# select example
+jq '.[] | select(.a == 1) ' <<< '[{ "a": 1 }, { "a": 2 }]'

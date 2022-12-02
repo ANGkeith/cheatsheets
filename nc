@@ -23,3 +23,6 @@ nc -x<proxy-host>:<proxy-port> -Xconnect -Pruser <host> <port>
 
 # To choose the source IP for the testing using the -s option
 nc -zv -s source_IP target_IP Port
+
+# To list on port 8080 TCP
+nc -l 8080

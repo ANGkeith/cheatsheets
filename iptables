@@ -41,3 +41,7 @@ iptables -D INPUT 2
 
 # 2.b) OR INSERT a rule.
 iptables -I INPUT {LINE_NUMBER} -i eth1 -p tcp --dport 21 -s 123.123.123.123 -j ACCEPT -m comment --comment "This rule is here for this reason"
+# To remove or insert a rule:
+
+# 3) Show all rules (with port numbers)
+iptables -L INPUT --line-numbers -n

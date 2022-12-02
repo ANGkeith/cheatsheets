@@ -28,3 +28,22 @@ psql -f <outfile>
 
 # Restore databases from file:
 psql -f <outfile> <username>
+
+
+#SQL queries
+#
+# connect to a different database
+# \c <database name>
+#
+# list databases
+# \l
+#
+# list roles
+# \du
+#
+# list schema in databases
+# \dn
+#
+# view privileges
+# SELECT * from information_schema.table_privileges WHERE grantee = 'application_foo' LIMIT 5;
+# SELECT * from information_schema.table_privileges LIMIT 5;
